@@ -1,1 +1,33 @@
-blank_issues_enabled: false
+name: Problem report
+description: Report a problem with MF50Config
+title: "[Problem] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping to test MF50Config.
+
+        The easiest way to fill this in: in the program choose **Help > Report a Problem...**, which copies the details to your clipboard, then paste them into the second box below.
+
+        Reports on this site are public. The copied details include the program's activity log, which shows your settings values, so look them over first.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What went wrong?
+      description: What were you doing, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details from the program
+      description: Paste (Ctrl+V) the details copied by Help > Report a Problem...
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: MF-50 firmware version (optional)
+      description: For example MicroFox-50 v0.5
